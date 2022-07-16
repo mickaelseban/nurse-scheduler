@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.dei.isep.ipp.pt/tap-2022" xmlns:tns="http://www.dei.isep.ipp.pt/tap-2022" elementFormDefault="qualified">
+    <element name="shiftSchedule" type="tns:TShiftSchedule" />
+
+    <complexType name="TShiftSchedule">
+        <choice>
+            <element name="day" type="tns:TDay" minOccurs="0" maxOccurs="unbounded"/>
+        </choice>
+    </complexType>
+
+    <complexType name="TDay">
+        <sequence>
+            <element name="shift" type="tns:TShift" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="id" type="positiveInteger"/>
+    </complexType>
+
+    <complexType name="TShift">
+        <sequence>
+            <element name="nurse" type="tns:TNurse" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="id" type="string"/>
+    </complexType>
+
+    <complexType name="TNurse">
+        <attribute name="name" type="string"/>
+        <attribute name="role" type="string"/>
+    </complexType>
+</schema>

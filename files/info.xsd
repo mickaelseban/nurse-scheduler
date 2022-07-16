@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.dei.isep.ipp.pt/tap-2022" xmlns:tns="http://www.dei.isep.ipp.pt/tap-2022" elementFormDefault="qualified">
+    <element name="scheduleInfo" type="tns:TScheduleInfo" />
+
+    <complexType name="TScheduleInfo">
+        <sequence>
+            <element name="schedulingPeriods" type="tns:TSchedulingPeriods"/>
+            <element name="nurses" type="tns:TNurses"/>
+            <element name="constraints" type="tns:TConstraints"/>
+            <element name="preferences" type="tns:TPreferences"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="TSchedulingPeriods">
+    <sequence>
+        <element name="schedulingPeriod" type="tns:TSchedulingPeriod" maxOccurs="unbounded"/>
+    </sequence>
+    </complexType>
+
+    <complexType name="TSchedulingPeriod">
+        <sequence>
+            <element name="nurseRequirement" type="tns:TNurseRequirements" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="id" type="ID"/>
+        <attribute name="start" type="time"/>
+        <attribute name="end" type="time"/>
+    </complexType>
+
+    <complexType name="TNurseRequirements">
+        <attribute name="role" type="string"/>
+        <attribute name="number" type="positiveInteger"/>
+    </complexType>
+
+    <complexType name="TNurses">
+        <sequence>
+            <element name="nurse" type="tns:TNurse"  maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="TNurse">
+        <sequence>
+            <element name="nurseRole" type="tns:TNurseRole"  maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="name" type="ID"/>
+        <attribute name="seniority" type="tns:TSimpleScaleSeniority" />
+    </complexType>
+
+    <complexType name="TNurseRole">
+        <attribute name="role" type="string"/>
+    </complexType>
+
+    <complexType name="TConstraints">
+        <attribute name="minRestDaysPerWeek" type="int"/>
+        <attribute name="maxShiftsPerDay" type="int" />
+    </complexType>
+
+    <complexType name="TPreferences">
+        <sequence>
+            <element name="period" type="tns:TPeriod" />
+            <element name="day" type="tns:TDay" />
+        </sequence>
+    </complexType>
+
+    <complexType name="TPeriod">
+        <sequence>
+            <element name="periodPreference" type="tns:TPeriodPreference"  minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="TDay">
+        <sequence>
+            <element name="dayPreference" type="tns:TDayPreference"  minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="TPeriodPreference">
+        <attribute name="nurse" type="IDREF"/>
+        <attribute name="period" type="IDREF"/>
+        <attribute name="value" type="tns:TSimpleScale" />
+    </complexType>
+
+    <complexType name="TDayPreference">
+        <attribute name="nurse" type="IDREF"/>
+        <attribute name="day" type="positiveInteger"/>
+        <attribute name="value" type="tns:TSimpleScale" />
+    </complexType>
+
+    <simpleType name="TSimpleScaleSeniority">
+        <restriction base="int">
+            <minInclusive value="1"/>
+            <maxInclusive value="5"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="TSimpleScale">
+        <restriction base="int">
+            <minInclusive value="-2"/>
+            <maxInclusive value="2"/>
+        </restriction>
+    </simpleType>
+
+</schema>

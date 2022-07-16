@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scheduleInfo xmlns="http://www.dei.isep.ipp.pt/tap-2022" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dei.isep.ipp.pt/tap-2022 ../../info.xsd ">
+
+    <schedulingPeriods>
+        <schedulingPeriod id="night" start="00:00:00" end="08:00:00">
+            <nurseRequirement role="A" number="1"/>
+            <nurseRequirement role="B" number="2"/>
+            <nurseRequirement role="D" number="1"/>
+        </schedulingPeriod>
+        <schedulingPeriod id="morning" start="08:00:00" end="16:00:00">
+            <nurseRequirement role="A" number="2"/>
+            <nurseRequirement role="B" number="1"/>
+        </schedulingPeriod>
+        <schedulingPeriod id="afternoon" start="16:00:00" end="00:00:00">
+            <nurseRequirement role="C" number="1"/>
+            <nurseRequirement role="D" number="1"/>
+            <nurseRequirement role="A" number="2"/>
+        </schedulingPeriod>
+    </schedulingPeriods>
+
+    <nurses>
+        <nurse name="n1" seniority="5">
+            <nurseRole role="A"/>
+            <nurseRole role="B"/>
+            <nurseRole role="C"/>
+        </nurse>
+        <nurse name="n2" seniority="4">
+            <nurseRole role="A"/>
+            <nurseRole role="B"/>
+            <nurseRole role="D"/>
+        </nurse>
+        <nurse name="n3" seniority="3">
+            <nurseRole role="A"/>
+            <nurseRole role="B"/>
+        </nurse>
+        <nurse name="n4" seniority="2">
+            <nurseRole role="A"/>
+            <nurseRole role="B"/>
+        </nurse>
+        <nurse name="n5" seniority="2">
+            <nurseRole role="A"/>
+            <nurseRole role="B"/>
+        </nurse>
+        <nurse name="n6" seniority="2">
+            <nurseRole role="A"/>
+            <nurseRole role="C"/>
+        </nurse>
+        <nurse name="n7" seniority="2">
+            <nurseRole role="B"/>
+            <nurseRole role="D"/>
+        </nurse>
+    </nurses>
+
+    <constraints minRestDaysPerWeek="1" maxShiftsPerDay="2"/>
+
+    <preferences>
+        <period>
+            <periodPreference nurse="n1" period="morning" value="2"/>
+        </period>
+        <day>
+            <dayPreference nurse="n3" day="6" value="2"/>
+        </day>
+    </preferences>
+</scheduleInfo>

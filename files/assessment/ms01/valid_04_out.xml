@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<shiftSchedule xmlns="http://www.dei.isep.ipp.pt/tap-2022" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dei.isep.ipp.pt/tap-2022 ../../schedule.xsd ">
+    <day id="1">
+        <shift id="night">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="A"/>
+            <nurse name="n4" role="B"/>
+        </shift>
+        <shift id="morning">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="B"/>
+        </shift>
+        <shift id="afternoon">
+            <nurse name="n4" role="A"/>
+        </shift>
+    </day>
+    <day id="2">
+        <shift id="night">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="A"/>
+            <nurse name="n4" role="B"/>
+        </shift>
+        <shift id="morning">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="B"/>
+        </shift>
+        <shift id="afternoon">
+            <nurse name="n4" role="A"/>
+        </shift>
+    </day>
+    <day id="3">
+        <shift id="night">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="A"/>
+            <nurse name="n4" role="B"/>
+        </shift>
+        <shift id="morning">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="B"/>
+        </shift>
+        <shift id="afternoon">
+            <nurse name="n4" role="A"/>
+        </shift>
+    </day>
+    <day id="4">
+        <shift id="night">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="A"/>
+            <nurse name="n4" role="B"/>
+        </shift>
+        <shift id="morning">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="B"/>
+        </shift>
+        <shift id="afternoon">
+            <nurse name="n4" role="A"/>
+        </shift>
+    </day>
+    <day id="5">
+        <shift id="night">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="A"/>
+            <nurse name="n4" role="B"/>
+        </shift>
+        <shift id="morning">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="B"/>
+        </shift>
+        <shift id="afternoon">
+            <nurse name="n4" role="A"/>
+        </shift>
+    </day>
+    <day id="6">
+        <shift id="night">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="A"/>
+            <nurse name="n4" role="B"/>
+        </shift>
+        <shift id="morning">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="B"/>
+        </shift>
+        <shift id="afternoon">
+            <nurse name="n4" role="A"/>
+        </shift>
+    </day>
+    <day id="7">
+        <shift id="night">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="A"/>
+            <nurse name="n4" role="B"/>
+        </shift>
+        <shift id="morning">
+            <nurse name="n1" role="A"/>
+            <nurse name="n2" role="A"/>
+            <nurse name="n3" role="B"/>
+        </shift>
+        <shift id="afternoon">
+            <nurse name="n4" role="A"/>
+        </shift>
+    </day>
+</shiftSchedule>
